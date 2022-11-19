@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Hackathon</title>
+</head>
+<body>
+
+   <!-- ?navbar start -->
+   <header id="header">
+  <nav class="navbar bg-dark navbar-dark navbar-expand-lg" id="nav__id">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <h1 class="position-absolute top-0 start-50 translate-middle-x">Студенты</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navContainer" aria-bs-controls="navContent" aria-bs-expanded="false" aria-bs-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+
+        <!-- todo search panel -->
+      <div class="d-flex" role="search" style="margin-left: 890px;">
+        <input
+          id="search"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button id="btn" class="btn btn-outline-light" type="submit">Search</button>
+      </div>
+      <div class="d-flex">
+        <button class="btn btn-outline-light" style="margin-left: 3px;" data-bs-toggle="modal" data-bs-target="#exampleModall" >Добавить</button>
+    </div>
+      </div>
+    </div>
+  </nav>
+  </header>
+  <!-- todo navbar end -->
+  
+<!-- todo modal start-->
+<div class="modal fade" id="exampleModall" tabindex="-1" aria-bs-labelledby="exampleModalLabel" aria-bs-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Панель куратора</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-bs-label="close"></button>
+            </div>
+
+            <!-- todo curator panel start -->
+            <div class="modal-body">
+                <div class="mt-5 d-flex flex-column w-100 align-items-center admin">
+                    <h2>Добавить студента</h2>
+                    <input
+                      type="text"
+                      id="first-name"
+                      class="mb-2 w-50 form-control inp"
+                      placeholder="Фамилия"
+                    />
+                    <input
+                      type="text"
+                      id="name"
+                      class="mb-2 w-50 form-control inp"
+                      placeholder="Имя"
+                    />
+                    <input
+                      type="text"
+                      id="phone"
+                      class="mb-2 w-50 form-control inp"
+                      placeholder="Номер телефона"
+                    />
+                    <input
+                      type="text"
+                      id="weekly-kpi"
+                      class="mb-2 w-50 form-control inp"
+                      placeholder="Недельный KPI"
+                    />
+                    <input
+                      type="text"
+                      id="monthly-kpi"
+                      class="mb-2 w-50 form-control inp"
+                      placeholder="Ежемесячный KPI"
+                    />
+                    <button class="btn btn-dark w-50" id="btn-add" style="background-color: black;">Добавить</button>
+                  </div>
+            </div>
+            <!-- todo curator panel end -->
+
+        </div>
+    </div>
+</div>
+
+<!-- todo content start -->
+<div
+id="students-list"
+class="d-flex flex-wrap"
+></div>
+<!-- todo content end -->
+
+  <!-- todo modal start -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: black;">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Переписать</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="d-flex flex-column w-100 align-items-center admin">
+              <h2>Rewrite student</h2>
+              <input
+                type="text"
+                id="rewrite-firstname"
+                class="mb-2 w-100 form-control inp"
+                placeholder="Rewrite firstname"
+              />
+              <input
+                type="text"
+                id="rewrite-name"
+                class="mb-2 w-100 form-control inp"
+                placeholder="Rewrite name"
+              />
+              <input
+                type="text"
+                id="rewrite-phone"
+                class="mb-2 w-100 form-control inp"
+                placeholder="Rewrite number"
+              />
+              <input
+                type="text"
+                id="rewrite-weekly-kpi"
+                class="mb-2 w-100 form-control inp"
+                placeholder="Rewrite weekly KPI"
+              />
+              <input
+                type="text"
+                id="rewrite-mounthly-kpi"
+                class="mb-2 w-100 form-control inp"
+                placeholder="Rewrite mounthly KPI"
+              />
+            </div>
+           
+          </div>
+          <div class="modal-footer" style="background-color: black;">
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-outline-success" id="btn-save-rewrite">
+              Rewrite
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- todo modal end -->
+
+    <!-- todo pagination start -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item prev">
+          <a href="#" aria-label="Previous" style="text-decoration: none;">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <div class="pagination-list d-flex">
+        </div>
+        <li class="page-item next">
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- todo pagination end -->
+
+    <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

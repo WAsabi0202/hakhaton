@@ -1,0 +1,52 @@
+{
+  "students": [
+    {
+      "firstName": "Орозалиева",
+      "lastName": "Айжан",
+      "phoneNumber": "0707852365",
+      "weeklyKPI": "45",
+      "monthlyKPI": "86",
+      "id": 2
+    },
+    {
+      "firstName": "Аликеева",
+      "lastName": "Канышай",
+      "phoneNumber": "0555846251",
+      "weeklyKPI": "50",
+      "monthlyKPI": "60",
+      "id": 3
+    },
+    {
+      "firstName": "Барыктабасов",
+      "lastName": "Калыйнур",
+      "phoneNumber": "0222845632",
+      "weeklyKPI": "25",
+      "monthlyKPI": "61",
+      "id": 4
+    },
+    {
+      "firstName": "Алымкулова",
+      "lastName": "Камилла",
+      "phoneNumber": "055085149",
+      "weeklyKPI": "78",
+      "monthlyKPI": "95",
+      "id": 5
+    },
+    {
+      "firstName": "Алымкулов",
+      "lastName": "Айдар",
+      "phoneNumber": "0708025896",
+      "weeklyKPI": "64",
+      "monthlyKPI": "86",
+      "id": 6
+    },
+    {
+      "firstName": "Инашева",
+      "lastName": "Уулбу",
+      "phoneNumber": "0707520236",
+      "weeklyKPI": "92",
+      "monthlyKPI": "100",
+      "id": 7
+    }
+  ]
+}
